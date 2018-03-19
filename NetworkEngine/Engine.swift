@@ -29,4 +29,29 @@ class Engine {
     }
     
     
+    // get user informations
+    // Engine.get(entityName, params, completion:)
+    
+    func get(name: Entity, params: [String: Any]?, completion: @escaping ((_ succeed: Bool) -> ())) {
+        
+        
+        print("get entity for : \(name), for params: \(String(describing: params))")
+        let queue = DispatchQueue(label: "fr.faustin.networkengine.coco")
+        queue.async {
+            var a = 22
+            for i in 0...100 {
+                a = a + i - 2 }
+            DispatchQueue.main.async {
+                print("a: \(a)")
+                var successed = false
+                if a == 4870 {
+                    successed = true}
+                completion(successed)
+            }
+        }
+    }
 }
+
+
+
+
