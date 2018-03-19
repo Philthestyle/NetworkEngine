@@ -9,18 +9,36 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    var eng: Engine
+    
+    required init?(coder aDecoder: NSCoder) {
+        eng = Engine(route: "https://fleur-1818.firebaseio.com/")
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // get user information
+        // Engine.get(entityName, params, completion:)
+        
+        print("I m gonna use my Engine: \(eng)")
+        
+        
+        eng.get(name: .exercice, params: nil, completion: { (success) in
+            
+            print("success: \(success)")
+            
+        })
+        
+        //        eng.get(name: .exercice, params: nil, completion: {success} in
+        //            print("success: \(success)")
+        //
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
-    // coucou toi
 }
-
