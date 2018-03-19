@@ -9,6 +9,15 @@
 import Foundation
 
 
+enum Entity: String {
+    case user
+    
+    case workout
+    
+    case exercice = ".json?print=pretty&format=export&download=fleur-1818-export.json&auth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1MjA4NTcxMjAsImV4cCI6MTUyMDg2MDcyMCwidiI6MCwiYWRtaW4iOnRydWV9.9vbcRXHTM6uABhl_bT28KbD1cCfn6kPZHMzzDrr7ebk"
+    
+    
+}
 
 
 class Engine {
